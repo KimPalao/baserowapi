@@ -1342,7 +1342,16 @@ class FormulaField(Field):
     """
 
     TYPE = "formula"
-    _COMPATIBLE_FILTERS = []
+    _COMPATIBLE_FILTERS = [
+        "equal",
+        "not_equal",
+        "contains",
+        "contains_not",
+        "contains_word",
+        "doesnt_contain_word",
+        "empty",
+        "not_empty",
+    ]
 
     def __init__(self, name: str, field_data: Dict[str, Any]):
         """
