@@ -1099,6 +1099,16 @@ class TableLinkRowValue(RowValue):
         super().__init__(field, raw_value, client)
 
     @property
+    def id(self) -> int:
+        """
+        Get the ID of the linked row.
+
+        :return: The ID of the linked row.
+        :rtype: int
+        """
+        return self._raw_value[0].get("id")
+
+    @property
     def value(self) -> List[Union[int, str]]:
         """
         Get the value in a user-friendly format. This method returns a list of primary field values or IDs.
