@@ -1099,14 +1099,14 @@ class TableLinkRowValue(RowValue):
         super().__init__(field, raw_value, client)
 
     @property
-    def id(self) -> int:
+    def id(self) -> Optional[int]:
         """
         Get the ID of the linked row.
 
         :return: The ID of the linked row.
         :rtype: int
         """
-        return self._raw_value[0].get("id")
+        return self._raw_value[0].get("id") if len(self._raw_value) else None
 
     @property
     def value(self) -> List[Union[int, str]]:
