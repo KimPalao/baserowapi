@@ -285,7 +285,7 @@ class Table:
                     f"'page_size' should be an integer, got {type(page_size)} instead."
                 )
                 raise ValueError("'page_size' parameter should be an integer.")
-            query_params_parts.append(f"page_size={page_size}")
+            query_params_parts.append(f"size={page_size}")
 
         # Handle filters using the Filter objects' query_string property
         if filters:
