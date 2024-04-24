@@ -1351,6 +1351,25 @@ class FormulaField(Field):
         "doesnt_contain_word",
         "empty",
         "not_empty",
+        "date_equal", 
+        "date_not_equal",
+        "date_equals_today", 
+        "date_before_today", 
+        "date_after_today", 
+        "date_within_days", 
+        "date_within_weeks", 
+        "date_within_months", 
+        "date_equals_days_ago", 
+        "date_equals_months_ago", 
+        "date_equals_years_ago", 
+        "date_equals_week", 
+        "date_equals_month", 
+        "date_equals_year", 
+        "date_before", 
+        "date_before_or_equal", 
+        "date_after", 
+        "date_after_or_equal", 
+        "date_after_days_ago"
     ]
 
     def __init__(self, name: str, field_data: Dict[str, Any]):
